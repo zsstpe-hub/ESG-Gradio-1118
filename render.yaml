@@ -1,0 +1,11 @@
+# 選用：Render Blueprint（New + → Blueprint 會自動讀取此檔）
+services:
+  - type: web
+    name: mops-opendata-explorer
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
